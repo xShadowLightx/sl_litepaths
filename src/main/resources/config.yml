@@ -3,7 +3,7 @@ enabled: true
 # The GitHub repository that publishes releases, in owner/name form. Blank disables checking.
 update-check:
   enabled: true
-  repository: ""
+  repository: "xShadowLightx/sl_litepaths"
   interval-hours: 12
 
 tracking:
