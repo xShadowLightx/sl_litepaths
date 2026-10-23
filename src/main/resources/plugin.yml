@@ -1,0 +1,16 @@
+name: LitePaths
+version: '${version}'
+main: dev.litepaths.LitePathsPlugin
+api-version: '1.21'
+description: Gradually worn travel paths with optional claim protection.
+authors: [LitePaths]
+softdepend: [Towny, WorldGuard, GriefPrevention]
+commands:
+  litepaths:
+    description: Manage LitePaths.
+    usage: /litepaths <toggle|reload|status|create|cancel>
+    aliases: [lp]
+permissions:
+  litepaths.admin:
+    description: Manage LitePaths and create manual paths.
+    default: op

@@ -1,0 +1,49 @@
+enabled: true
+
+# The GitHub repository that publishes releases, in owner/name form. Blank disables checking.
+update-check:
+  enabled: true
+  repository: ""
+  interval-hours: 12
+
+tracking:
+  # Minimum horizontal distance between samples from the same player.
+  sample-distance: 1.0
+  # Ignore flight, vehicles, swimming, and sprinting unless enabled below.
+  count-sprinting: true
+  count-flying: false
+  count-vehicles: false
+  # Samples required before a surface changes to the next wear stage.
+  samples-per-stage: 80
+  # Limit work per server tick when many travelers are online.
+  blocks-per-tick: 24
+
+paths:
+  # Only these natural-looking ground types are eligible. Air, structures, ores, and vegetation are never replaced.
+  eligible-blocks:
+    - GRASS_BLOCK
+    - DIRT
+    - COARSE_DIRT
+    - PODZOL
+    - ROOTED_DIRT
+  stages:
+    - COARSE_DIRT
+    - GRAVEL
+    - STONE
+  # Small chance to skip a stage conversion for a less uniform appearance.
+  variation-percent: 12
+  # Preserve blocks underneath the walking surface; paths are surface-only.
+  require-clearance: true
+
+protection:
+  towny: true
+  worldguard: true
+  griefprevention: true
+  # Manual routes also obey claim protections.
+  protect-manual-routes: true
+
+storage:
+  # Single compact file; data is periodically written and saved on shutdown.
+  flush-interval-seconds: 120
+  # Stop tracking new locations after this many entries, to cap disk/memory use. 0 means unlimited.
+  max-locations: 100000
